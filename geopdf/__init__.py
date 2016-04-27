@@ -7,7 +7,7 @@ from reportlab.pdfbase import pdfdoc
 from reportlab.pdfgen import canvas
 
 
-class GeoPDFBase(object, PDFDictionary):
+class GeoPDFBase(PDFDictionary):
     """
     Base class for GeoPDF dicts.
     """
@@ -65,7 +65,7 @@ class LGIDict(GeoPDFBase):
         return True
 
 
-class GeoCanvas(canvas.Canvas, object):
+class GeoCanvas(canvas.Canvas):
 
     LGIDict = PDFArray([])
 
